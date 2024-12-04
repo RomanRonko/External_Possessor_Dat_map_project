@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_bbf814c25ed84e08eab7b04117410b52 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+     <div style="position: fixed; 
+                 bottom: 10px; left: 10px; width: 150px; height: 120px; 
+                 background-color: white; border:2px solid grey; z-index: 9999; font-size: 14px;">
+         <b>Legend</b><br>
+         <i style="background: green; width: 18px; height: 18px; float: left; margin-right: 5px; border-radius: 50%;"></i> Existence = 1<br>
+         <i style="background: blue; width: 18px; height: 18px; float: left; margin-right: 5px; border-radius: 50%;"></i> Existence = 0<br>
+         <i style="background: red; width: 18px; height: 18px; float: left; margin-right: 5px; border-radius: 50%;"></i> Source = Kuzmina 1993
+     </div>
+    
+            <div class="folium-map" id="map_bbf814c25ed84e08eab7b04117410b52" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_bbf814c25ed84e08eab7b04117410b52 = L.map(
+                "map_bbf814c25ed84e08eab7b04117410b52",
+                {
+                    center: [57.75535624507245, 37.85367871],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6eb72d6802aab58f1c342fb45687354d = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_6eb72d6802aab58f1c342fb45687354d.addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+            var circle_marker_52f64907af5d69d56ed48c77111663b2 = L.circleMarker(
+                [56.797336, 28.6968345],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_0c4f7beaf8affc1f94e1b860b1a46d1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb5fc25b14ca5205ba8ffe33507c8dcb = $(`<div id="html_fb5fc25b14ca5205ba8ffe33507c8dcb" style="width: 100.0%; height: 100.0%;"><b>Belki</b><br>Sourse: Opochka corpus<br>Language: Russian</div>`)[0];
+                popup_0c4f7beaf8affc1f94e1b860b1a46d1b.setContent(html_fb5fc25b14ca5205ba8ffe33507c8dcb);
+            
+        
+
+        circle_marker_52f64907af5d69d56ed48c77111663b2.bindPopup(popup_0c4f7beaf8affc1f94e1b860b1a46d1b)
+        ;
+
+        
+    
+    
+            var circle_marker_2c1519a9b7d2fcfe84cf941719cce876 = L.circleMarker(
+                [56.737086, 28.83266],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_1d460264d2245e853110fb11a4e3ffa8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9bcd19300b0e6b0793227b29f5423ae8 = $(`<div id="html_9bcd19300b0e6b0793227b29f5423ae8" style="width: 100.0%; height: 100.0%;"><b>Laptevo</b><br>Sourse: Ronko 2020<br>Language: Russian</div>`)[0];
+                popup_1d460264d2245e853110fb11a4e3ffa8.setContent(html_9bcd19300b0e6b0793227b29f5423ae8);
+            
+        
+
+        circle_marker_2c1519a9b7d2fcfe84cf941719cce876.bindPopup(popup_1d460264d2245e853110fb11a4e3ffa8)
+        ;
+
+        
+    
+    
+            var circle_marker_5471010f882acc40367104e1f7752522 = L.circleMarker(
+                [56.81, 28.693],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_7110f1c52827e5f2faf489a58f15358c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0665f11f3eeb0d8476df27e414703941 = $(`<div id="html_0665f11f3eeb0d8476df27e414703941" style="width: 100.0%; height: 100.0%;"><b>Kadnikovo</b><br>Sourse: Opochka corpus<br>Language: Russian</div>`)[0];
+                popup_7110f1c52827e5f2faf489a58f15358c.setContent(html_0665f11f3eeb0d8476df27e414703941);
+            
+        
+
+        circle_marker_5471010f882acc40367104e1f7752522.bindPopup(popup_7110f1c52827e5f2faf489a58f15358c)
+        ;
+
+        
+    
+    
+            var circle_marker_0ba3bf94031f1be3661a6825dd489b41 = L.circleMarker(
+                [56.77047, 28.673483],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_24109917de204c3ac26adc7f98c660e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf41ab3c2800f6ff3d077bfee60d6ed3 = $(`<div id="html_bf41ab3c2800f6ff3d077bfee60d6ed3" style="width: 100.0%; height: 100.0%;"><b>Purshevo</b><br>Sourse: Ronko 2020<br>Language: Russian</div>`)[0];
+                popup_24109917de204c3ac26adc7f98c660e2.setContent(html_bf41ab3c2800f6ff3d077bfee60d6ed3);
+            
+        
+
+        circle_marker_0ba3bf94031f1be3661a6825dd489b41.bindPopup(popup_24109917de204c3ac26adc7f98c660e2)
+        ;
+
+        
+    
+    
+            var circle_marker_60f8d21e3996b4167f4f3e7e064a69a0 = L.circleMarker(
+                [52.282288, 31.780948],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_dba1899aa3b44026a6cd19beced15279 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e767fedff7322028a0b7de01a1ada8e = $(`<div id="html_3e767fedff7322028a0b7de01a1ada8e" style="width: 100.0%; height: 100.0%;"><b>Spiridonova Buda</b><br>Sourse: Spiridonova Buda corpus<br>Language: Belarusian</div>`)[0];
+                popup_dba1899aa3b44026a6cd19beced15279.setContent(html_3e767fedff7322028a0b7de01a1ada8e);
+            
+        
+
+        circle_marker_60f8d21e3996b4167f4f3e7e064a69a0.bindPopup(popup_dba1899aa3b44026a6cd19beced15279)
+        ;
+
+        
+    
+    
+            var circle_marker_eac0a402ba9971533fad3d521912cb56 = L.circleMarker(
+                [51.221126, 38.372957],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_5313b3a32ed6c5e05d529114333944ec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fa78def634af317d3d977f6259957d66 = $(`<div id="html_fa78def634af317d3d977f6259957d66" style="width: 100.0%; height: 100.0%;"><b>Rogovatka</b><br>Sourse: Rogovatka corpus<br>Language: Russian</div>`)[0];
+                popup_5313b3a32ed6c5e05d529114333944ec.setContent(html_fa78def634af317d3d977f6259957d66);
+            
+        
+
+        circle_marker_eac0a402ba9971533fad3d521912cb56.bindPopup(popup_5313b3a32ed6c5e05d529114333944ec)
+        ;
+
+        
+    
+    
+            var circle_marker_069295e72ff210342d0feef4a24be9b5 = L.circleMarker(
+                [52.185524, 25.160131],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_77ffb367f50542be28bf510ad83aeb11 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_daa5fe82b4a998763d999f59bcaa8270 = $(`<div id="html_daa5fe82b4a998763d999f59bcaa8270" style="width: 100.0%; height: 100.0%;"><b>Dragovichi</b><br>Sourse: Barszczewska, Jankowiak 2012<br>Language: Belarusian</div>`)[0];
+                popup_77ffb367f50542be28bf510ad83aeb11.setContent(html_daa5fe82b4a998763d999f59bcaa8270);
+            
+        
+
+        circle_marker_069295e72ff210342d0feef4a24be9b5.bindPopup(popup_77ffb367f50542be28bf510ad83aeb11)
+        ;
+
+        
+    
+    
+            var circle_marker_4db1c13f83322a64a95e78bc5070b778 = L.circleMarker(
+                [55.8951464, 27.1814577],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_225c3a1f6afd5978bb4528961438ca45 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90e84a2a36ba062f488540b80ab114bd = $(`<div id="html_90e84a2a36ba062f488540b80ab114bd" style="width: 100.0%; height: 100.0%;"><b>Kraslava</b><br>Sourse: Jankowiak 2012<br>Language: Belarusian</div>`)[0];
+                popup_225c3a1f6afd5978bb4528961438ca45.setContent(html_90e84a2a36ba062f488540b80ab114bd);
+            
+        
+
+        circle_marker_4db1c13f83322a64a95e78bc5070b778.bindPopup(popup_225c3a1f6afd5978bb4528961438ca45)
+        ;
+
+        
+    
+    
+            var circle_marker_52c4f69d82fbd632b934892f99425707 = L.circleMarker(
+                [52.271328, 39.33313],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_532205de07e755598bda3557010dfb27 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5b840e23c8c4231429df9472fabe9af1 = $(`<div id="html_5b840e23c8c4231429df9472fabe9af1" style="width: 100.0%; height: 100.0%;"><b>Malinino</b><br>Sourse: Malinino corpus<br>Language: Russian</div>`)[0];
+                popup_532205de07e755598bda3557010dfb27.setContent(html_5b840e23c8c4231429df9472fabe9af1);
+            
+        
+
+        circle_marker_52c4f69d82fbd632b934892f99425707.bindPopup(popup_532205de07e755598bda3557010dfb27)
+        ;
+
+        
+    
+    
+            var circle_marker_61890d5460fc40a42c4d4b722ffdb323 = L.circleMarker(
+                [56.85, 33.452],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_d3475d2ea5811be13cfb8fb2adb5ae02 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e7cdb7d8d55bab95efe58585b6d33eb2 = $(`<div id="html_e7cdb7d8d55bab95efe58585b6d33eb2" style="width: 100.0%; height: 100.0%;"><b>Seližarovo</b><br>Sourse: Nikolaev Tolstaja 2008<br>Language: Russian</div>`)[0];
+                popup_d3475d2ea5811be13cfb8fb2adb5ae02.setContent(html_e7cdb7d8d55bab95efe58585b6d33eb2);
+            
+        
+
+        circle_marker_61890d5460fc40a42c4d4b722ffdb323.bindPopup(popup_d3475d2ea5811be13cfb8fb2adb5ae02)
+        ;
+
+        
+    
+    
+            var circle_marker_9f0a148ac0a81ca78b433c3fe56fc0e6 = L.circleMarker(
+                [61.5623155, 43.900241],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_e706e00c45ae83030f396febe3e425fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ba92f947640f5e360ab0408ad17ae9b5 = $(`<div id="html_ba92f947640f5e360ab0408ad17ae9b5" style="width: 100.0%; height: 100.0%;"><b>Mihalevskaja</b><br>Sourse: UstjaRiver Basin Corpus<br>Language: Russian</div>`)[0];
+                popup_e706e00c45ae83030f396febe3e425fa.setContent(html_ba92f947640f5e360ab0408ad17ae9b5);
+            
+        
+
+        circle_marker_9f0a148ac0a81ca78b433c3fe56fc0e6.bindPopup(popup_e706e00c45ae83030f396febe3e425fa)
+        ;
+
+        
+    
+    
+            var circle_marker_11283312eef3e830f9b0d4662abd3a54 = L.circleMarker(
+                [64.5401, 40.5433],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_194e9d546c77c50e9c7c49b05d737041 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_29b97f8e8cebe659b4480fa3a55abe2c = $(`<div id="html_29b97f8e8cebe659b4480fa3a55abe2c" style="width: 100.0%; height: 100.0%;"><b>Arhangelsk</b><br>Sourse: RNC North<br>Language: Russian</div>`)[0];
+                popup_194e9d546c77c50e9c7c49b05d737041.setContent(html_29b97f8e8cebe659b4480fa3a55abe2c);
+            
+        
+
+        circle_marker_11283312eef3e830f9b0d4662abd3a54.bindPopup(popup_194e9d546c77c50e9c7c49b05d737041)
+        ;
+
+        
+    
+    
+            var circle_marker_fef311b8ceeccdc4398e9e560a8453c5 = L.circleMarker(
+                [55.593005, 40.028363],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_b19160a658365338452ab6bb97a433ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e50410dc5a6c570d319982118908f95 = $(`<div id="html_5e50410dc5a6c570d319982118908f95" style="width: 100.0%; height: 100.0%;"><b>Pustosha</b><br>Sourse: Online database on Russian folk dialects<br>Language: Russian</div>`)[0];
+                popup_b19160a658365338452ab6bb97a433ba.setContent(html_5e50410dc5a6c570d319982118908f95);
+            
+        
+
+        circle_marker_fef311b8ceeccdc4398e9e560a8453c5.bindPopup(popup_b19160a658365338452ab6bb97a433ba)
+        ;
+
+        
+    
+    
+            var circle_marker_b7c6ae794ed8756a073d3ff54d567927 = L.circleMarker(
+                [59.95, 40.206],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_942f73445791e628e77340947435306d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b2e6d2e75ce6f8edd50f2b206688ae35 = $(`<div id="html_b2e6d2e75ce6f8edd50f2b206688ae35" style="width: 100.0%; height: 100.0%;"><b>Kharovsk </b><br>Sourse: Kharovsk  dialects database<br>Language: Russian</div>`)[0];
+                popup_942f73445791e628e77340947435306d.setContent(html_b2e6d2e75ce6f8edd50f2b206688ae35);
+            
+        
+
+        circle_marker_b7c6ae794ed8756a073d3ff54d567927.bindPopup(popup_942f73445791e628e77340947435306d)
+        ;
+
+        
+    
+    
+            var circle_marker_7d03ae57465773202b5a5482f046b188 = L.circleMarker(
+                [53.425206, 34.931637],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_a4ade13cf0850404a15ee876758f98ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b79e304e2d54a74ac440009b2f445358 = $(`<div id="html_b79e304e2d54a74ac440009b2f445358" style="width: 100.0%; height: 100.0%;"><b>Nekhochi</b><br>Sourse: Nekhochi corpus<br>Language: Russian</div>`)[0];
+                popup_a4ade13cf0850404a15ee876758f98ff.setContent(html_b79e304e2d54a74ac440009b2f445358);
+            
+        
+
+        circle_marker_7d03ae57465773202b5a5482f046b188.bindPopup(popup_a4ade13cf0850404a15ee876758f98ff)
+        ;
+
+        
+    
+    
+            var circle_marker_a8279020fe750965cfbaf7647aca39e6 = L.circleMarker(
+                [56.66217, 41.739366],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_7b514a77667f0afe95295a1c9d53f5b7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_065395e42d6645dc2c9e9974bd92768d = $(`<div id="html_065395e42d6645dc2c9e9974bd92768d" style="width: 100.0%; height: 100.0%;"><b>Domnino</b><br>Sourse: Corpus of russian dialects spoken in the basin of Luch and Teza rivers<br>Language: Russian</div>`)[0];
+                popup_7b514a77667f0afe95295a1c9d53f5b7.setContent(html_065395e42d6645dc2c9e9974bd92768d);
+            
+        
+
+        circle_marker_a8279020fe750965cfbaf7647aca39e6.bindPopup(popup_7b514a77667f0afe95295a1c9d53f5b7)
+        ;
+
+        
+    
+    
+            var circle_marker_b2541ff467afb43d78a86c619a8ab2d4 = L.circleMarker(
+                [56.659934, 42.423647],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_27987aff66a0f7cafb9e9194a771bd41 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_51cf0407d9330bf74deaf35fc06eecaa = $(`<div id="html_51cf0407d9330bf74deaf35fc06eecaa" style="width: 100.0%; height: 100.0%;"><b>Nizhnij Landekh</b><br>Sourse: Corpus of russian dialects spoken in the basin of Luch and Teza rivers<br>Language: Russian</div>`)[0];
+                popup_27987aff66a0f7cafb9e9194a771bd41.setContent(html_51cf0407d9330bf74deaf35fc06eecaa);
+            
+        
+
+        circle_marker_b2541ff467afb43d78a86c619a8ab2d4.bindPopup(popup_27987aff66a0f7cafb9e9194a771bd41)
+        ;
+
+        
+    
+    
+            var circle_marker_f3605463bc7a5a9f2b62a6571cca2cde = L.circleMarker(
+                [56.648567, 41.835384],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_d9a329b738cdcf8d02103384f288658b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_67c4ae8a79b19e2a4b2354de0c9eb344 = $(`<div id="html_67c4ae8a79b19e2a4b2354de0c9eb344" style="width: 100.0%; height: 100.0%;"><b>Preobrazhenskoe</b><br>Sourse: Corpus of russian dialects spoken in the basin of Luch and Teza rivers<br>Language: Russian</div>`)[0];
+                popup_d9a329b738cdcf8d02103384f288658b.setContent(html_67c4ae8a79b19e2a4b2354de0c9eb344);
+            
+        
+
+        circle_marker_f3605463bc7a5a9f2b62a6571cca2cde.bindPopup(popup_d9a329b738cdcf8d02103384f288658b)
+        ;
+
+        
+    
+    
+            var circle_marker_42593e69267d9f929a5bea066f936c1b = L.circleMarker(
+                [56.693431, 41.634308],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_76b10102dbc165b86a8b1f7fb6c500ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c1801a02033fc3886835792f4e035ca = $(`<div id="html_9c1801a02033fc3886835792f4e035ca" style="width: 100.0%; height: 100.0%;"><b>Volokobino</b><br>Sourse: Corpus of russian dialects spoken in the basin of Luch and Teza rivers<br>Language: Russian</div>`)[0];
+                popup_76b10102dbc165b86a8b1f7fb6c500ee.setContent(html_9c1801a02033fc3886835792f4e035ca);
+            
+        
+
+        circle_marker_42593e69267d9f929a5bea066f936c1b.bindPopup(popup_76b10102dbc165b86a8b1f7fb6c500ee)
+        ;
+
+        
+    
+    
+            var circle_marker_04bb27e700a9a52b5f3ea2d97d2be433 = L.circleMarker(
+                [56.631664, 42.237388],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_a601155ba608dd9de22cf83dcac029a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4d91cd80c1f0620c5c39548241623cd3 = $(`<div id="html_4d91cd80c1f0620c5c39548241623cd3" style="width: 100.0%; height: 100.0%;"><b>Mugreevo-Nikol'skoe</b><br>Sourse: Corpus of russian dialects spoken in the basin of Luch and Teza rivers<br>Language: Russian</div>`)[0];
+                popup_a601155ba608dd9de22cf83dcac029a4.setContent(html_4d91cd80c1f0620c5c39548241623cd3);
+            
+        
+
+        circle_marker_04bb27e700a9a52b5f3ea2d97d2be433.bindPopup(popup_a601155ba608dd9de22cf83dcac029a4)
+        ;
+
+        
+    
+    
+            var circle_marker_f5a6dc032d766b0b59986f2254ca0ecc = L.circleMarker(
+                [56.2288827, 31.6125619],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_0245a204e74bcf496078ab6fa235598a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_daa8fc1bfaebdd1d79147878c8cc5609 = $(`<div id="html_daa8fc1bfaebdd1d79147878c8cc5609" style="width: 100.0%; height: 100.0%;"><b>Shetnevo</b><br>Sourse: Shetnevo and Makeevo corpus<br>Language: Russian</div>`)[0];
+                popup_0245a204e74bcf496078ab6fa235598a.setContent(html_daa8fc1bfaebdd1d79147878c8cc5609);
+            
+        
+
+        circle_marker_f5a6dc032d766b0b59986f2254ca0ecc.bindPopup(popup_0245a204e74bcf496078ab6fa235598a)
+        ;
+
+        
+    
+    
+            var circle_marker_e0c67916c4b8eb092b623ec8c3a2ef7e = L.circleMarker(
+                [56.244665, 31.764689],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_9c3176c62f2a2465cb71364dd286167e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6a49852b0bf4fe79ed7a953a6df6c49f = $(`<div id="html_6a49852b0bf4fe79ed7a953a6df6c49f" style="width: 100.0%; height: 100.0%;"><b>Pyatiusovo</b><br>Sourse: Pyatiusovo corpus<br>Language: Russian</div>`)[0];
+                popup_9c3176c62f2a2465cb71364dd286167e.setContent(html_6a49852b0bf4fe79ed7a953a6df6c49f);
+            
+        
+
+        circle_marker_e0c67916c4b8eb092b623ec8c3a2ef7e.bindPopup(popup_9c3176c62f2a2465cb71364dd286167e)
+        ;
+
+        
+    
+    
+            var circle_marker_9970cad66fac76f8f3d17938b49ffc65 = L.circleMarker(
+                [62.10565, 42.899612],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_256faa14ba00974cf791d61d730d339c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e04aed009b67c9c01bf16eed6bd6c23 = $(`<div id="html_3e04aed009b67c9c01bf16eed6bd6c23" style="width: 100.0%; height: 100.0%;"><b>Shenkursk</b><br>Sourse: Kuzmina 1993<br>Language: Russian</div>`)[0];
+                popup_256faa14ba00974cf791d61d730d339c.setContent(html_3e04aed009b67c9c01bf16eed6bd6c23);
+            
+        
+
+        circle_marker_9970cad66fac76f8f3d17938b49ffc65.bindPopup(popup_256faa14ba00974cf791d61d730d339c)
+        ;
+
+        
+    
+    
+            var circle_marker_eb944741f30ce50ff424959920cf9314 = L.circleMarker(
+                [61.151986, 35.617788],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_6f58fb9783b8ef44a36f581af547acf8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21c0f970d35c0a0ebb5a426cc9edce89 = $(`<div id="html_21c0f970d35c0a0ebb5a426cc9edce89" style="width: 100.0%; height: 100.0%;"><b>Gimreka</b><br>Sourse: Kuzmina 1993<br>Language: Russian</div>`)[0];
+                popup_6f58fb9783b8ef44a36f581af547acf8.setContent(html_21c0f970d35c0a0ebb5a426cc9edce89);
+            
+        
+
+        circle_marker_eb944741f30ce50ff424959920cf9314.bindPopup(popup_6f58fb9783b8ef44a36f581af547acf8)
+        ;
+
+        
+    
+    
+            var circle_marker_bce1702aed0555938950707f3493dc7f = L.circleMarker(
+                [59.3936, 35.9371],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_391d183c3795b2dd2256c45c20ea14b7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c3a4976051ead5ddcfa66d4b7ffd4693 = $(`<div id="html_c3a4976051ead5ddcfa66d4b7ffd4693" style="width: 100.0%; height: 100.0%;"><b>Babaevsk</b><br>Sourse: Kuzmina 1993<br>Language: Russian</div>`)[0];
+                popup_391d183c3795b2dd2256c45c20ea14b7.setContent(html_c3a4976051ead5ddcfa66d4b7ffd4693);
+            
+        
+
+        circle_marker_bce1702aed0555938950707f3493dc7f.bindPopup(popup_391d183c3795b2dd2256c45c20ea14b7)
+        ;
+
+        
+    
+    
+            var circle_marker_2f900a05e7fc9f8ffd20d8ea1d220c50 = L.circleMarker(
+                [58.0446, 38.84259],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_1658efb1cf13dfa983b85e114daf58dc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d199b10c185d44e9ddc5fe499dc28f7b = $(`<div id="html_d199b10c185d44e9ddc5fe499dc28f7b" style="width: 100.0%; height: 100.0%;"><b>Rybinsk</b><br>Sourse: Kuzmina 1993<br>Language: Russian</div>`)[0];
+                popup_1658efb1cf13dfa983b85e114daf58dc.setContent(html_d199b10c185d44e9ddc5fe499dc28f7b);
+            
+        
+
+        circle_marker_2f900a05e7fc9f8ffd20d8ea1d220c50.bindPopup(popup_1658efb1cf13dfa983b85e114daf58dc)
+        ;
+
+        
+    
+    
+            var circle_marker_17e2b70505fd650394aa180854c6eb8f = L.circleMarker(
+                [59.276667, 32.087778],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_9819987e73333f694dc4fc25e15b8a25 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_605332d6a9572454d59108dabb5c877a = $(`<div id="html_605332d6a9572454d59108dabb5c877a" style="width: 100.0%; height: 100.0%;"><b>Oskuy</b><br>Sourse: Kuzmina 1993<br>Language: Russian</div>`)[0];
+                popup_9819987e73333f694dc4fc25e15b8a25.setContent(html_605332d6a9572454d59108dabb5c877a);
+            
+        
+
+        circle_marker_17e2b70505fd650394aa180854c6eb8f.bindPopup(popup_9819987e73333f694dc4fc25e15b8a25)
+        ;
+
+        
+    
+    
+            var circle_marker_609c5df8940da378291f4272a2af7b99 = L.circleMarker(
+                [55.35, 26.16667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_ddbf991be14f290bb44450cd2914c5df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fde8b6e736bd182d5ee8b7d3996a5c05 = $(`<div id="html_fde8b6e736bd182d5ee8b7d3996a5c05" style="width: 100.0%; height: 100.0%;"><b>Ignalina</b><br>Sourse: Kuzmina 1993<br>Language: Russian</div>`)[0];
+                popup_ddbf991be14f290bb44450cd2914c5df.setContent(html_fde8b6e736bd182d5ee8b7d3996a5c05);
+            
+        
+
+        circle_marker_609c5df8940da378291f4272a2af7b99.bindPopup(popup_ddbf991be14f290bb44450cd2914c5df)
+        ;
+
+        
+    
+    
+            var circle_marker_d6f9b905df8b35a4cd884de3bb39a789 = L.circleMarker(
+                [56.812778, 31.180833],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_e544ca9d81263345b697de01a5608525 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3a70872a67bc08949e38b8e2e5fbeb3d = $(`<div id="html_3a70872a67bc08949e38b8e2e5fbeb3d" style="width: 100.0%; height: 100.0%;"><b>Medvedevo</b><br>Sourse: Kuzmina 1993<br>Language: Russian</div>`)[0];
+                popup_e544ca9d81263345b697de01a5608525.setContent(html_3a70872a67bc08949e38b8e2e5fbeb3d);
+            
+        
+
+        circle_marker_d6f9b905df8b35a4cd884de3bb39a789.bindPopup(popup_e544ca9d81263345b697de01a5608525)
+        ;
+
+        
+    
+    
+            var circle_marker_f7edb2df11c5fcf0b1259c11cdec5b15 = L.circleMarker(
+                [56.64542, 31.887677],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_7cb96d01804be4b83c6380eb0b1ed007 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef5cea4a7a7cff7ef17b2dd6990e1341 = $(`<div id="html_ef5cea4a7a7cff7ef17b2dd6990e1341" style="width: 100.0%; height: 100.0%;"><b>Xotilicy</b><br>Sourse: Kuzmina 1993<br>Language: Russian</div>`)[0];
+                popup_7cb96d01804be4b83c6380eb0b1ed007.setContent(html_ef5cea4a7a7cff7ef17b2dd6990e1341);
+            
+        
+
+        circle_marker_f7edb2df11c5fcf0b1259c11cdec5b15.bindPopup(popup_7cb96d01804be4b83c6380eb0b1ed007)
+        ;
+
+        
+    
+    
+            var circle_marker_4992ea47550bd16ed11ba84e25d873ca = L.circleMarker(
+                [54.7605, 38.87841],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_378b3bf283b014b6b428b143adf9536c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_633be1667e039c76630ce5e8654553a8 = $(`<div id="html_633be1667e039c76630ce5e8654553a8" style="width: 100.0%; height: 100.0%;"><b>Zarasajsk</b><br>Sourse: Kuzmina 1993<br>Language: Russian</div>`)[0];
+                popup_378b3bf283b014b6b428b143adf9536c.setContent(html_633be1667e039c76630ce5e8654553a8);
+            
+        
+
+        circle_marker_4992ea47550bd16ed11ba84e25d873ca.bindPopup(popup_378b3bf283b014b6b428b143adf9536c)
+        ;
+
+        
+    
+    
+            var circle_marker_56e378deee802229ba8ba0899b06ea92 = L.circleMarker(
+                [50.634444, 39.844722],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_d15361a7eaf5dcfcad3761e6052f17c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c27387097850d8d30ba94db8ef699cb9 = $(`<div id="html_c27387097850d8d30ba94db8ef699cb9" style="width: 100.0%; height: 100.0%;"><b>Kolodezhnoe</b><br>Sourse: Kolodezhnoe corpus<br>Language: Ukrainian</div>`)[0];
+                popup_d15361a7eaf5dcfcad3761e6052f17c9.setContent(html_c27387097850d8d30ba94db8ef699cb9);
+            
+        
+
+        circle_marker_56e378deee802229ba8ba0899b06ea92.bindPopup(popup_d15361a7eaf5dcfcad3761e6052f17c9)
+        ;
+
+        
+    
+    
+            var circle_marker_f63f0ff9eed7bbf95761381c49c8019e = L.circleMarker(
+                [64.35296829, 46.20578404],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_2c42ca79e47dbc6cc9723ae86dc2f47b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_17ac6c558743abb145e5c52478696f7e = $(`<div id="html_17ac6c558743abb145e5c52478696f7e" style="width: 100.0%; height: 100.0%;"><b>Keba</b><br>Sourse: Corpus of the Russian dialect spoken in Keba<br>Language: Russian</div>`)[0];
+                popup_2c42ca79e47dbc6cc9723ae86dc2f47b.setContent(html_17ac6c558743abb145e5c52478696f7e);
+            
+        
+
+        circle_marker_f63f0ff9eed7bbf95761381c49c8019e.bindPopup(popup_2c42ca79e47dbc6cc9723ae86dc2f47b)
+        ;
+
+        
+    
+    
+            var circle_marker_73d28bfbaf08444a83ab6e1f69ebcf11 = L.circleMarker(
+                [54.03100203, 31.89814767],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_ed59d758ea9e910eea0d8e8d35f19db6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91023be19863bdd0ff619cf533368ac9 = $(`<div id="html_91023be19863bdd0ff619cf533368ac9" style="width: 100.0%; height: 100.0%;"><b>Zhanvil</b><br>Sourse: Corpus of the Russian dialect spoken in Khislavichi district<br>Language: Russian</div>`)[0];
+                popup_ed59d758ea9e910eea0d8e8d35f19db6.setContent(html_91023be19863bdd0ff619cf533368ac9);
+            
+        
+
+        circle_marker_73d28bfbaf08444a83ab6e1f69ebcf11.bindPopup(popup_ed59d758ea9e910eea0d8e8d35f19db6)
+        ;
+
+        
+    
+    
+            var circle_marker_1643a0455eaa6c501169e9409595ad02 = L.circleMarker(
+                [53.99736518, 32.00736634],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_469d283a03ba0ca4048db05b65f9bbf6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2fa97d6e21cd74fd8ca1ea02892cc5e3 = $(`<div id="html_2fa97d6e21cd74fd8ca1ea02892cc5e3" style="width: 100.0%; height: 100.0%;"><b>Zhygalki</b><br>Sourse: Corpus of the Russian dialect spoken in Khislavichi district<br>Language: Russian</div>`)[0];
+                popup_469d283a03ba0ca4048db05b65f9bbf6.setContent(html_2fa97d6e21cd74fd8ca1ea02892cc5e3);
+            
+        
+
+        circle_marker_1643a0455eaa6c501169e9409595ad02.bindPopup(popup_469d283a03ba0ca4048db05b65f9bbf6)
+        ;
+
+        
+    
+    
+            var circle_marker_82b330480b7d7c522fad02cf1f3aaf0b = L.circleMarker(
+                [54.12557365, 32.00218658],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_8205c4e265964a19f8a78a7a4b9166cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3c3bbecc8e62c536271e2d73c7cb51d4 = $(`<div id="html_3c3bbecc8e62c536271e2d73c7cb51d4" style="width: 100.0%; height: 100.0%;"><b>Malye Khutora</b><br>Sourse: Corpus of the Russian dialect spoken in Khislavichi district<br>Language: Russian</div>`)[0];
+                popup_8205c4e265964a19f8a78a7a4b9166cc.setContent(html_3c3bbecc8e62c536271e2d73c7cb51d4);
+            
+        
+
+        circle_marker_82b330480b7d7c522fad02cf1f3aaf0b.bindPopup(popup_8205c4e265964a19f8a78a7a4b9166cc)
+        ;
+
+        
+    
+    
+            var circle_marker_9abc37c3a7a4d9e634295970cf36590f = L.circleMarker(
+                [53.97977414, 31.99372067],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_083d0926988dfe1253b8ec82a67edfda = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e7146f9f191b4bde7c19a1d8b5bd4b4 = $(`<div id="html_5e7146f9f191b4bde7c19a1d8b5bd4b4" style="width: 100.0%; height: 100.0%;"><b>Soino</b><br>Sourse: Corpus of the Russian dialect spoken in Khislavichi district<br>Language: Russian</div>`)[0];
+                popup_083d0926988dfe1253b8ec82a67edfda.setContent(html_5e7146f9f191b4bde7c19a1d8b5bd4b4);
+            
+        
+
+        circle_marker_9abc37c3a7a4d9e634295970cf36590f.bindPopup(popup_083d0926988dfe1253b8ec82a67edfda)
+        ;
+
+        
+    
+    
+            var circle_marker_378299dad71b451c46acfc89e9a9dd55 = L.circleMarker(
+                [54.13313367, 32.01403531],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_579919d433bc5d251243c4a9c4f1df8e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f0838d071f26f5dffe073d062c5ebeb2 = $(`<div id="html_f0838d071f26f5dffe073d062c5ebeb2" style="width: 100.0%; height: 100.0%;"><b>Stajki</b><br>Sourse: Corpus of the Russian dialect spoken in Khislavichi district<br>Language: Russian</div>`)[0];
+                popup_579919d433bc5d251243c4a9c4f1df8e.setContent(html_f0838d071f26f5dffe073d062c5ebeb2);
+            
+        
+
+        circle_marker_378299dad71b451c46acfc89e9a9dd55.bindPopup(popup_579919d433bc5d251243c4a9c4f1df8e)
+        ;
+
+        
+    
+    
+            var circle_marker_2cd047b2b273ae9e37cf587586d712fd = L.circleMarker(
+                [58.12741514, 44.3564281],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_33c9ab02df62b0dbf02354792ceb74ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf587127b72a73a788af7a37fee4e98e = $(`<div id="html_bf587127b72a73a788af7a37fee4e98e" style="width: 100.0%; height: 100.0%;"><b>Ugory</b><br>Sourse: Corpus of the Russian dialect spoken in Manturovo<br>Language: Russian</div>`)[0];
+                popup_33c9ab02df62b0dbf02354792ceb74ba.setContent(html_bf587127b72a73a788af7a37fee4e98e);
+            
+        
+
+        circle_marker_2cd047b2b273ae9e37cf587586d712fd.bindPopup(popup_33c9ab02df62b0dbf02354792ceb74ba)
+        ;
+
+        
+    
+    
+            var circle_marker_75c6ff05fec6a8c6585e4c8b3c852021 = L.circleMarker(
+                [54.12917, 39.26306],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_797e0ea85fc815a48e6ea9858f8367ac = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ecfa78dbfbda8f99e54cb8bce1635359 = $(`<div id="html_ecfa78dbfbda8f99e54cb8bce1635359" style="width: 100.0%; height: 100.0%;"><b>Pecherniki</b><br>Sourse: Corpus of the Russian dialect spoken in the Mikhaylov area<br>Language: Russian</div>`)[0];
+                popup_797e0ea85fc815a48e6ea9858f8367ac.setContent(html_ecfa78dbfbda8f99e54cb8bce1635359);
+            
+        
+
+        circle_marker_75c6ff05fec6a8c6585e4c8b3c852021.bindPopup(popup_797e0ea85fc815a48e6ea9858f8367ac)
+        ;
+
+        
+    
+    
+            var circle_marker_a6c7aae988cac65fee61678bbce40d38 = L.circleMarker(
+                [54.33944, 39.06333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_56fce1ad44f42c001df56dec368bcd40 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2751204e32016d235c474024c70674e6 = $(`<div id="html_2751204e32016d235c474024c70674e6" style="width: 100.0%; height: 100.0%;"><b>Novopanskoye</b><br>Sourse: Corpus of the Russian dialect spoken in the Mikhaylov area<br>Language: Russian</div>`)[0];
+                popup_56fce1ad44f42c001df56dec368bcd40.setContent(html_2751204e32016d235c474024c70674e6);
+            
+        
+
+        circle_marker_a6c7aae988cac65fee61678bbce40d38.bindPopup(popup_56fce1ad44f42c001df56dec368bcd40)
+        ;
+
+        
+    
+    
+            var circle_marker_4e1331c745b6b4acc26875a9636b0c65 = L.circleMarker(
+                [54.282996, 39.201418],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_750903847abe132dbea5b2d8b26e37c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af34737a6fba60cebf5b0e875f4385c2 = $(`<div id="html_af34737a6fba60cebf5b0e875f4385c2" style="width: 100.0%; height: 100.0%;"><b>Khavertovo</b><br>Sourse: Corpus of the Russian dialect spoken in the Mikhaylov area<br>Language: Russian</div>`)[0];
+                popup_750903847abe132dbea5b2d8b26e37c5.setContent(html_af34737a6fba60cebf5b0e875f4385c2);
+            
+        
+
+        circle_marker_4e1331c745b6b4acc26875a9636b0c65.bindPopup(popup_750903847abe132dbea5b2d8b26e37c5)
+        ;
+
+        
+    
+    
+            var circle_marker_ee49a6e4ef4e6885326ebb03575de369 = L.circleMarker(
+                [64.288509, 44.326406],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_d9f3a6ed6450965bd6aecbee73ae59d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a8443f07f185d3e1de040fb8006bdb93 = $(`<div id="html_a8443f07f185d3e1de040fb8006bdb93" style="width: 100.0%; height: 100.0%;"><b>Veegora</b><br>Sourse: Corpus of the Russian dialect spoken in the village Veegora<br>Language: Russian</div>`)[0];
+                popup_d9f3a6ed6450965bd6aecbee73ae59d3.setContent(html_a8443f07f185d3e1de040fb8006bdb93);
+            
+        
+
+        circle_marker_ee49a6e4ef4e6885326ebb03575de369.bindPopup(popup_d9f3a6ed6450965bd6aecbee73ae59d3)
+        ;
+
+        
+    
+    
+            var circle_marker_955020dd03f6902c1209aa55cd24f220 = L.circleMarker(
+                [47.53933391, 40.64226054],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_071424b9e5256a67f4438a80400f7396 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf2786474e560a28688dc0f6ff611b2f = $(`<div id="html_cf2786474e560a28688dc0f6ff611b2f" style="width: 100.0%; height: 100.0%;"><b>Razdorskaya</b><br>Sourse: Corpus of the Russian dialect spoken in the villages of the Don river<br>Language: Russian</div>`)[0];
+                popup_071424b9e5256a67f4438a80400f7396.setContent(html_cf2786474e560a28688dc0f6ff611b2f);
+            
+        
+
+        circle_marker_955020dd03f6902c1209aa55cd24f220.bindPopup(popup_071424b9e5256a67f4438a80400f7396)
+        ;
+
+        
+    
+    
+            var circle_marker_3e9f0f540e66f3687a282da5debb333d = L.circleMarker(
+                [47.48119837, 40.47855162],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_78a64c99af05349673bd19fd503b8600 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e62e2c1b8cbd72cc16917b5e24854378 = $(`<div id="html_e62e2c1b8cbd72cc16917b5e24854378" style="width: 100.0%; height: 100.0%;"><b>Melikhovskaya</b><br>Sourse: Corpus of the Russian dialect spoken in the villages of the Don river<br>Language: Russian</div>`)[0];
+                popup_78a64c99af05349673bd19fd503b8600.setContent(html_e62e2c1b8cbd72cc16917b5e24854378);
+            
+        
+
+        circle_marker_3e9f0f540e66f3687a282da5debb333d.bindPopup(popup_78a64c99af05349673bd19fd503b8600)
+        ;
+
+        
+    
+    
+            var circle_marker_95d44691367bff5aec5ea120cd8d97ba = L.circleMarker(
+                [62.484937, 43.776278],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_85cdab471af190597c803ffdca346830 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2a610823cb32e58434cbb1b3f79c7c1d = $(`<div id="html_2a610823cb32e58434cbb1b3f79c7c1d" style="width: 100.0%; height: 100.0%;"><b>Seltso</b><br>Sourse: Corpus of the Russian dialect spoken in the villages of the Middle Northern Dvina<br>Language: Russian</div>`)[0];
+                popup_85cdab471af190597c803ffdca346830.setContent(html_2a610823cb32e58434cbb1b3f79c7c1d);
+            
+        
+
+        circle_marker_95d44691367bff5aec5ea120cd8d97ba.bindPopup(popup_85cdab471af190597c803ffdca346830)
+        ;
+
+        
+    
+    
+            var circle_marker_32158f8740e650b96bfba873ba6faf7a = L.circleMarker(
+                [62.012085, 45.213367],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_271b3b0ef8e54eec18ba1b8cfa7e9e85 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_acf82ae61f00abaa091b70661dbf0711 = $(`<div id="html_acf82ae61f00abaa091b70661dbf0711" style="width: 100.0%; height: 100.0%;"><b>Timoshino</b><br>Sourse: Corpus of the Russian dialect spoken in the villages of the Middle Northern Dvina<br>Language: Russian</div>`)[0];
+                popup_271b3b0ef8e54eec18ba1b8cfa7e9e85.setContent(html_acf82ae61f00abaa091b70661dbf0711);
+            
+        
+
+        circle_marker_32158f8740e650b96bfba873ba6faf7a.bindPopup(popup_271b3b0ef8e54eec18ba1b8cfa7e9e85)
+        ;
+
+        
+    
+    
+            var circle_marker_2ccdeef54048b71268f6f8f6e3a756a4 = L.circleMarker(
+                [63.442014, 46.525869],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_c9cc3ad13f516a0ecd83552bbfae8866 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8447b53ec42a9f45ab356cfb4e3a772c = $(`<div id="html_8447b53ec42a9f45ab356cfb4e3a772c" style="width: 100.0%; height: 100.0%;"><b>Nyukhcha</b><br>Sourse: Corpus of the Russian dialect spoken in the villages of the Middle Pinega<br>Language: Russian</div>`)[0];
+                popup_c9cc3ad13f516a0ecd83552bbfae8866.setContent(html_8447b53ec42a9f45ab356cfb4e3a772c);
+            
+        
+
+        circle_marker_2ccdeef54048b71268f6f8f6e3a756a4.bindPopup(popup_c9cc3ad13f516a0ecd83552bbfae8866)
+        ;
+
+        
+    
+    
+            var circle_marker_cb1c5f9d7b42038473b1e94d67be3696 = L.circleMarker(
+                [63.43472, 46.54139],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_a6120e6e181bbf9e75cc28251e0fcac4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c02edf90074f3b2bbf69a85e35dff3a = $(`<div id="html_7c02edf90074f3b2bbf69a85e35dff3a" style="width: 100.0%; height: 100.0%;"><b>Zanyukhcha</b><br>Sourse: Corpus of the Russian dialect spoken in the villages of the Middle Pinega<br>Language: Russian</div>`)[0];
+                popup_a6120e6e181bbf9e75cc28251e0fcac4.setContent(html_7c02edf90074f3b2bbf69a85e35dff3a);
+            
+        
+
+        circle_marker_cb1c5f9d7b42038473b1e94d67be3696.bindPopup(popup_a6120e6e181bbf9e75cc28251e0fcac4)
+        ;
+
+        
+    
+    
+            var circle_marker_2707c21b70a5adf8b81efa5324121bbb = L.circleMarker(
+                [63.63344, 45.52426],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_ed14bb6c737b1c202b960ba1a0f6afdf = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7709f3a0f4dcc4bd6c163d83dee6de89 = $(`<div id="html_7709f3a0f4dcc4bd6c163d83dee6de89" style="width: 100.0%; height: 100.0%;"><b>Lavela</b><br>Sourse: Corpus of the Russian dialect spoken in the villages of the Middle Pinega<br>Language: Russian</div>`)[0];
+                popup_ed14bb6c737b1c202b960ba1a0f6afdf.setContent(html_7709f3a0f4dcc4bd6c163d83dee6de89);
+            
+        
+
+        circle_marker_2707c21b70a5adf8b81efa5324121bbb.bindPopup(popup_ed14bb6c737b1c202b960ba1a0f6afdf)
+        ;
+
+        
+    
+    
+            var circle_marker_58a554640ec2bc6372f4534c036ce30a = L.circleMarker(
+                [63.71437, 45.41804],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_49e1f9ff3bc6f734c7ad331b39edf93b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c5cfb946256015c84e6f0be6fe83e9e7 = $(`<div id="html_c5cfb946256015c84e6f0be6fe83e9e7" style="width: 100.0%; height: 100.0%;"><b>Yavzora</b><br>Sourse: Corpus of the Russian dialect spoken in the villages of the Middle Pinega<br>Language: Russian</div>`)[0];
+                popup_49e1f9ff3bc6f734c7ad331b39edf93b.setContent(html_c5cfb946256015c84e6f0be6fe83e9e7);
+            
+        
+
+        circle_marker_58a554640ec2bc6372f4534c036ce30a.bindPopup(popup_49e1f9ff3bc6f734c7ad331b39edf93b)
+        ;
+
+        
+    
+    
+            var circle_marker_e26b0b01400a72235e7454a41592e00a = L.circleMarker(
+                [63.95333, 44.51],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_c0aa04ae9a13a55d024d1fecf30b2646 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b5719e7fed99ca23140e0b6c2b8f0826 = $(`<div id="html_b5719e7fed99ca23140e0b6c2b8f0826" style="width: 100.0%; height: 100.0%;"><b>Kevrola</b><br>Sourse: Corpus of the Russian dialect spoken in the villages of the Middle Pinega<br>Language: Russian</div>`)[0];
+                popup_c0aa04ae9a13a55d024d1fecf30b2646.setContent(html_b5719e7fed99ca23140e0b6c2b8f0826);
+            
+        
+
+        circle_marker_e26b0b01400a72235e7454a41592e00a.bindPopup(popup_c0aa04ae9a13a55d024d1fecf30b2646)
+        ;
+
+        
+    
+    
+            var circle_marker_bd0c5e06cb367ad4922d31550079f035 = L.circleMarker(
+                [63.971728, 44.513615],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_db7ce784acd1bfbaa0fbfba9884688d9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a37fbd75a740fd7913f2b92096a19efb = $(`<div id="html_a37fbd75a740fd7913f2b92096a19efb" style="width: 100.0%; height: 100.0%;"><b>Vaymusha</b><br>Sourse: Corpus of the Russian dialect spoken in the villages of the Middle Pinega<br>Language: Russian</div>`)[0];
+                popup_db7ce784acd1bfbaa0fbfba9884688d9.setContent(html_a37fbd75a740fd7913f2b92096a19efb);
+            
+        
+
+        circle_marker_bd0c5e06cb367ad4922d31550079f035.bindPopup(popup_db7ce784acd1bfbaa0fbfba9884688d9)
+        ;
+
+        
+    
+    
+            var circle_marker_e2aff22a08645603bec977536960bb20 = L.circleMarker(
+                [65.79154042, 46.15583678],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_e75f68892ad9a12f2c7e51eaaa6793e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_71645f995fb65e744722cfe494483415 = $(`<div id="html_71645f995fb65e744722cfe494483415" style="width: 100.0%; height: 100.0%;"><b>Moseyevo</b><br>Sourse: Corpus of the Russian dialect spoken in the villages of the Middle Pyoza<br>Language: Russian</div>`)[0];
+                popup_e75f68892ad9a12f2c7e51eaaa6793e2.setContent(html_71645f995fb65e744722cfe494483415);
+            
+        
+
+        circle_marker_e2aff22a08645603bec977536960bb20.bindPopup(popup_e75f68892ad9a12f2c7e51eaaa6793e2)
+        ;
+
+        
+    
+    
+            var circle_marker_22ff65e1e2e3e1aa7976c7fe74604716 = L.circleMarker(
+                [62.66236876, 41.35828599],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_cbcdaecc777bc0bb514e04436a75e7d2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4bcca6441df0370c83b0d1983ad996d2 = $(`<div id="html_4bcca6441df0370c83b0d1983ad996d2" style="width: 100.0%; height: 100.0%;"><b>Niz</b><br>Sourse: Corpus of the Russian dialect spoken in Tserkovnoe<br>Language: Russian</div>`)[0];
+                popup_cbcdaecc777bc0bb514e04436a75e7d2.setContent(html_4bcca6441df0370c83b0d1983ad996d2);
+            
+        
+
+        circle_marker_22ff65e1e2e3e1aa7976c7fe74604716.bindPopup(popup_cbcdaecc777bc0bb514e04436a75e7d2)
+        ;
+
+        
+    
+    
+            var circle_marker_8eac395c8d7c66d5a533fe15e3213ea4 = L.circleMarker(
+                [52.46194, 38.26556],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_0f8168f7893ae0c60a1e99e070543c79 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_308b297f1c65b5215e5a9e80f01b08dc = $(`<div id="html_308b297f1c65b5215e5a9e80f01b08dc" style="width: 100.0%; height: 100.0%;"><b>Svishni</b><br>Sourse: Svishni and Trostnoe Corpus <br>Language: Russian</div>`)[0];
+                popup_0f8168f7893ae0c60a1e99e070543c79.setContent(html_308b297f1c65b5215e5a9e80f01b08dc);
+            
+        
+
+        circle_marker_8eac395c8d7c66d5a533fe15e3213ea4.bindPopup(popup_0f8168f7893ae0c60a1e99e070543c79)
+        ;
+
+        
+    
+    
+            var circle_marker_5c901d1eba3e037b3f2c2ab724d28467 = L.circleMarker(
+                [52.698905, 38.374125],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_8c8e038f6d089e8077674843fb6b4ea8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1ae2746a50a0de6b0d8368decc23808 = $(`<div id="html_f1ae2746a50a0de6b0d8368decc23808" style="width: 100.0%; height: 100.0%;"><b>Svishni</b><br>Sourse: Svishni and Trostnoe Corpus <br>Language: Russian</div>`)[0];
+                popup_8c8e038f6d089e8077674843fb6b4ea8.setContent(html_f1ae2746a50a0de6b0d8368decc23808);
+            
+        
+
+        circle_marker_5c901d1eba3e037b3f2c2ab724d28467.bindPopup(popup_8c8e038f6d089e8077674843fb6b4ea8)
+        ;
+
+        
+    
+    
+            var circle_marker_ecb33996040977e631c73a9bc27ab331 = L.circleMarker(
+                [62.68166952, 46.49360741],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_4c9001207198f21bb50789793f82e559 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ebd3cb5ade1dec09675c84555966852c = $(`<div id="html_ebd3cb5ade1dec09675c84555966852c" style="width: 100.0%; height: 100.0%;"><b>Vadyuga</b><br>Sourse: Upper Pinega and Vyya Corpus<br>Language: Russian</div>`)[0];
+                popup_4c9001207198f21bb50789793f82e559.setContent(html_ebd3cb5ade1dec09675c84555966852c);
+            
+        
+
+        circle_marker_ecb33996040977e631c73a9bc27ab331.bindPopup(popup_4c9001207198f21bb50789793f82e559)
+        ;
+
+        
+    
+    
+            var circle_marker_20c9bef3ae77e40647d3181c43b2d63f = L.circleMarker(
+                [62.94220939, 46.13215149],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_23f9d3b2d1eaa2f083d7d2ca8a4ba5ca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_abbf1be433ff3efe5ce3081fe561f0e2 = $(`<div id="html_abbf1be433ff3efe5ce3081fe561f0e2" style="width: 100.0%; height: 100.0%;"><b>Tineva</b><br>Sourse: Upper Pinega and Vyya Corpus<br>Language: Russian</div>`)[0];
+                popup_23f9d3b2d1eaa2f083d7d2ca8a4ba5ca.setContent(html_abbf1be433ff3efe5ce3081fe561f0e2);
+            
+        
+
+        circle_marker_20c9bef3ae77e40647d3181c43b2d63f.bindPopup(popup_23f9d3b2d1eaa2f083d7d2ca8a4ba5ca)
+        ;
+
+        
+    
+    
+            var circle_marker_ccbe3081523c6bbfc144bc68d52fe008 = L.circleMarker(
+                [62.93915634, 46.42674763],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_98719338381f8e24a182ecae2db91b6e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5c8718486f0f162897164bce7cedff54 = $(`<div id="html_5c8718486f0f162897164bce7cedff54" style="width: 100.0%; height: 100.0%;"><b>Zaytsevo</b><br>Sourse: Upper Pinega and Vyya Corpus<br>Language: Russian</div>`)[0];
+                popup_98719338381f8e24a182ecae2db91b6e.setContent(html_5c8718486f0f162897164bce7cedff54);
+            
+        
+
+        circle_marker_ccbe3081523c6bbfc144bc68d52fe008.bindPopup(popup_98719338381f8e24a182ecae2db91b6e)
+        ;
+
+        
+    
+    
+            var circle_marker_d46ed0f2dc5c641110e4b155d275768e = L.circleMarker(
+                [62.94455674, 46.37503928],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_fad2d8d9bccb09c467550a26513660d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fa3b335cfaac357b529f4ec145ee9d3d = $(`<div id="html_fa3b335cfaac357b529f4ec145ee9d3d" style="width: 100.0%; height: 100.0%;"><b>Podolskaya</b><br>Sourse: Upper Pinega and Vyya Corpus<br>Language: Russian</div>`)[0];
+                popup_fad2d8d9bccb09c467550a26513660d4.setContent(html_fa3b335cfaac357b529f4ec145ee9d3d);
+            
+        
+
+        circle_marker_d46ed0f2dc5c641110e4b155d275768e.bindPopup(popup_fad2d8d9bccb09c467550a26513660d4)
+        ;
+
+        
+    
+    
+            var circle_marker_e59c78a2177234297a6353fa2d7b2ccc = L.circleMarker(
+                [61.50111116, 42.65695604],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_bb6db1e9d48bb5fe4dfdeac74567ef43 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26349205ac1d45c62f79c8ac991a48cb = $(`<div id="html_26349205ac1d45c62f79c8ac991a48cb" style="width: 100.0%; height: 100.0%;"><b>Mikhalevskaya</b><br>Sourse: Ustja River Basin Corpus<br>Language: Russian</div>`)[0];
+                popup_bb6db1e9d48bb5fe4dfdeac74567ef43.setContent(html_26349205ac1d45c62f79c8ac991a48cb);
+            
+        
+
+        circle_marker_e59c78a2177234297a6353fa2d7b2ccc.bindPopup(popup_bb6db1e9d48bb5fe4dfdeac74567ef43)
+        ;
+
+        
+    
+    
+            var circle_marker_9b36ce155278163dcf74e7f9262e542e = L.circleMarker(
+                [58.39333, 31.1975],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_dd33e51cfd6cfd8cfab90c2e95750855 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13c64f06ca63d4859a2b12a56a846687 = $(`<div id="html_13c64f06ca63d4859a2b12a56a846687" style="width: 100.0%; height: 100.0%;"><b>Ilmen</b><br>Sourse: Corpus of the Russian dialect spoken in Ilmen Lake district<br>Language: Russian</div>`)[0];
+                popup_dd33e51cfd6cfd8cfab90c2e95750855.setContent(html_13c64f06ca63d4859a2b12a56a846687);
+            
+        
+
+        circle_marker_9b36ce155278163dcf74e7f9262e542e.bindPopup(popup_dd33e51cfd6cfd8cfab90c2e95750855)
+        ;
+
+        
+    
+    
+            var circle_marker_44da2a58c0fa9f84f6ca2a4ab1f95892 = L.circleMarker(
+                [58.4053472, 31.1762],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_f6d1bcab41b59b1482753ac6360ee1e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_72a2b6a5897164b56ce8aa9538db1e00 = $(`<div id="html_72a2b6a5897164b56ce8aa9538db1e00" style="width: 100.0%; height: 100.0%;"><b>Neronov Bor</b><br>Sourse: Corpus of the Russian dialect spoken in Ilmen Lake district<br>Language: Russian</div>`)[0];
+                popup_f6d1bcab41b59b1482753ac6360ee1e9.setContent(html_72a2b6a5897164b56ce8aa9538db1e00);
+            
+        
+
+        circle_marker_44da2a58c0fa9f84f6ca2a4ab1f95892.bindPopup(popup_f6d1bcab41b59b1482753ac6360ee1e9)
+        ;
+
+        
+    
+    
+            var circle_marker_2800d6bf265305a8ecd48c8243d560b6 = L.circleMarker(
+                [58.3447278, 31.1523417],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_169f284d5934ac5cb0f72d64fe2c71d0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f63840593a4c3aa97357a447d222194 = $(`<div id="html_2f63840593a4c3aa97357a447d222194" style="width: 100.0%; height: 100.0%;"><b>Kuritsko</b><br>Sourse: Corpus of the Russian dialect spoken in Ilmen Lake district<br>Language: Russian</div>`)[0];
+                popup_169f284d5934ac5cb0f72d64fe2c71d0.setContent(html_2f63840593a4c3aa97357a447d222194);
+            
+        
+
+        circle_marker_2800d6bf265305a8ecd48c8243d560b6.bindPopup(popup_169f284d5934ac5cb0f72d64fe2c71d0)
+        ;
+
+        
+    
+    
+            var circle_marker_ab3b5314416ac31344a085cd656bf3f7 = L.circleMarker(
+                [58.3767694, 31.1377528],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_5240bc0f5646e608eb3542865be3fec0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7356cfce7d826be4d100d81e487e9ec = $(`<div id="html_f7356cfce7d826be4d100d81e487e9ec" style="width: 100.0%; height: 100.0%;"><b>Khotyazh</b><br>Sourse: Corpus of the Russian dialect spoken in Ilmen Lake district<br>Language: Russian</div>`)[0];
+                popup_5240bc0f5646e608eb3542865be3fec0.setContent(html_f7356cfce7d826be4d100d81e487e9ec);
+            
+        
+
+        circle_marker_ab3b5314416ac31344a085cd656bf3f7.bindPopup(popup_5240bc0f5646e608eb3542865be3fec0)
+        ;
+
+        
+    
+    
+            var circle_marker_911b3e9b3e1d1efe0f574eaa26e33133 = L.circleMarker(
+                [58.4067972, 31.2071639],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_121c9360ecf29fd8fc6c9d05d47c6178 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f287f35df2bde7380ec2bda6d388c55a = $(`<div id="html_f287f35df2bde7380ec2bda6d388c55a" style="width: 100.0%; height: 100.0%;"><b>Kozynevo</b><br>Sourse: Corpus of the Russian dialect spoken in Ilmen Lake district<br>Language: Russian</div>`)[0];
+                popup_121c9360ecf29fd8fc6c9d05d47c6178.setContent(html_f287f35df2bde7380ec2bda6d388c55a);
+            
+        
+
+        circle_marker_911b3e9b3e1d1efe0f574eaa26e33133.bindPopup(popup_121c9360ecf29fd8fc6c9d05d47c6178)
+        ;
+
+        
+    
+    
+            var circle_marker_5b8ccd11071af52d9f38bcec2677dbda = L.circleMarker(
+                [58.95417, 31.07944],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_80d3e93dd67c0496c2914f5920277584 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1ea3ca1ddcd01ad5d15780ce2bd53b0 = $(`<div id="html_f1ea3ca1ddcd01ad5d15780ce2bd53b0" style="width: 100.0%; height: 100.0%;"><b>Finyov Lug</b><br>Sourse: Corpus of the Russian dialect spoken in Ilmen Lake district<br>Language: Russian</div>`)[0];
+                popup_80d3e93dd67c0496c2914f5920277584.setContent(html_f1ea3ca1ddcd01ad5d15780ce2bd53b0);
+            
+        
+
+        circle_marker_5b8ccd11071af52d9f38bcec2677dbda.bindPopup(popup_80d3e93dd67c0496c2914f5920277584)
+        ;
+
+        
+    
+    
+            var circle_marker_0c92cb4fbed1714a6a0933fa62a6a941 = L.circleMarker(
+                [53.324589, 40.862943],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_bbf814c25ed84e08eab7b04117410b52);
+        
+    
+        var popup_711ded724494f70ba42ecacf7f89e00f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d47d044977fe478d9f5c99623462468c = $(`<div id="html_d47d044977fe478d9f5c99623462468c" style="width: 100.0%; height: 100.0%;"><b>Popovka</b><br>Sourse: Corpus of the Russian dialect spoken in Popovka<br>Language: Russian</div>`)[0];
+                popup_711ded724494f70ba42ecacf7f89e00f.setContent(html_d47d044977fe478d9f5c99623462468c);
+            
+        
+
+        circle_marker_0c92cb4fbed1714a6a0933fa62a6a941.bindPopup(popup_711ded724494f70ba42ecacf7f89e00f)
+        ;
+
+        
+    
+</script>
+</html>
